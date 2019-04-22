@@ -1,0 +1,76 @@
+﻿<Window x:Class="StringManipulationWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StringManipulationWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="#FF740C0C">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="64*" />
+            <RowDefinition Height="58*" />
+            <RowDefinition Height="78*" />
+            <RowDefinition Height="72"  />
+            <RowDefinition Height="147*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch" Margin="0,0,-0.4,0">
+            <TextBlock><InlineUIContainer>
+                    <Label x:Name="lbl1" Content="String Manipulation" Height="43" Width="283" FontFamily="Lucida Console" FontSize="24" Foreground="#FF9DCE10" OpacityMask="{DynamicResource {x:Static SystemColors.InfoTextBrushKey}}" Background="Black"/>
+                </InlineUIContainer></TextBlock>
+        </Border>
+        <Border Grid.Column="0" Grid.RowSpan="5"
+                BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch" Grid.ColumnSpan="2" Margin="0,63,396.6,0">
+            <TextBlock><Run Text="1,0 - 2,1"/><InlineUIContainer>
+                    <TextBox x:Name="opArea" Height="332" TextWrapping="Wrap" Text="---Output Will Appear Here---" Width="313" ToolTip="Uneditable - Read Only" Background="Black" Foreground="#FFB6F10C" RenderTransformOrigin="0.5,0.5"/>
+                </InlineUIContainer></TextBlock>
+        </Border>
+        <Border Grid.Column="1"
+                BorderBrush="Black" BorderThickness="0"
+                 Grid.RowSpan="4" Margin="0.2,63,-0.4,8.8">
+
+            <TextBlock>
+                <InlineUIContainer>
+                    <Label Content="Enter Word To Manipulate" Width="180" Foreground="#FFFDF4F4" Height="40"/>
+                </InlineUIContainer>
+                <InlineUIContainer>
+                    <TextBox x:Name="tbInputWord" Height="43" TextWrapping="Wrap" Width="149" MaxLength="15" ToolTip="Enter Word - Max length 15 chars" Background="Black" Foreground="White" Cursor="Pen" FontSize="16" FontFamily="Consolas"/>
+                </InlineUIContainer></TextBlock>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="1"
+                BorderBrush="Black" BorderThickness="0" Grid.RowSpan="2" Margin="0.2,8.6,-0.4,4.8">
+            <TextBlock>
+                <InlineUIContainer>
+                    <Label Content="Enter Letter To Replace" Width="180" Foreground="#FFFDF4F4" Height="40"/>
+                </InlineUIContainer>
+                <InlineUIContainer>
+                    <TextBox x:Name="tbInputToReplace" Height="43" TextWrapping="Wrap" Width="30" ToolTip="Letter to be replaced" Background="Black" Foreground="White" Cursor="Pen" MaxLength="1" MaxLines="1" FontFamily="Consolas" FontSize="20"/>
+                </InlineUIContainer></TextBlock>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="1"
+                BorderBrush="Black" BorderThickness="0" Grid.RowSpan="2" Margin="0.2,1.2,-0.4,0">
+            <TextBlock Margin="0.2,-0.8,0,-0.2"><InlineUIContainer>
+                    <Label Content="Enter Letter that will replace" Width="180" Foreground="#FFFDF4F4" Height="40"/>
+                </InlineUIContainer><Run Text=" "/><InlineUIContainer>
+                    <TextBox x:Name="tbInputReplaceWith" Height="43" TextWrapping="Wrap" Width="30" ToolTip="Replacement Letter" Background="Black" Foreground="White" Cursor="Pen" MaxLength="1" MaxLines="1" FontFamily="Consolas" FontSize="20"/>
+                </InlineUIContainer></TextBlock>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="1"
+                BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch" Margin="0.2,34.2,9.6,10">
+            <TextBlock><InlineUIContainer>
+                    <Button x:Name="btn1" Content="Execute" Height="80" Width="293" Background="#FF2629FF" Foreground="#FFA7FF24" FontSize="20" Click="btn1_Click_1">
+                    </Button>
+                </InlineUIContainer></TextBlock>
+        </Border>
+    </Grid>
+
+
+</Window>
